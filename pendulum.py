@@ -46,7 +46,7 @@ w2 = 0.0
 # initial state
 state = np.radians([th1, w1, th2, w2])
 
-# integrate your ODE using scipy.integrate.
+# integrate ODE using scipy.integrate.
 y = integrate.odeint(derivs, state, t)
 
 x1 = L1*sin(y[:, 0])
@@ -83,4 +83,3 @@ ani = animation.FuncAnimation(fig, animate, np.arange(1, len(y)),
 
 # ani.save('double_pendulum.mp4', fps=15)
 plt.show()
-
